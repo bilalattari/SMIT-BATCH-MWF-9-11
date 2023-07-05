@@ -16,6 +16,9 @@ body {
   height: 80px;
   background-color: black;
   display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 12;
 }
 .logo {
   flex-grow: 1.5;
@@ -35,7 +38,7 @@ body {
   padding-right: 30px;
 }
 
-li {
+.headings > ul > li {
   display: inline-block;
   color: white;
   width: 90px;
@@ -49,12 +52,13 @@ li {
   width: 40px;
 }
 
-li:hover {
+.headings > ul > li:hover {
   color: red;
 }
 
 .slider {
   height: 500px;
+  padding-top: 80px;
   background-color: aqua;
   background-image: url("https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmVlfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60");
   background-repeat: no-repeat;
@@ -102,4 +106,66 @@ button {
 button:hover {
   color: red;
   border-color: red;
+}
+
+.coffee_list {
+  text-align: center;
+}
+
+.coffee_list > ul {
+  list-style-type: none;
+  /* list-style-image: url("coffee-cup.png"); */
+}
+
+.coffee_box_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.coofee_box {
+  height: 300px;
+  width: 300px;
+  border: 0.5px solid #c4a484;
+  margin: 10px 15px;
+  position: relative;
+  overflow: hidden;
+  font-family: PoppinsMedium;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.coofee_box > img {
+  height: 200px;
+  width: 100%;
+  image-rendering: crisp-edges;
+}
+
+.coofee_box > img:hover {
+  /* height: 210px; */
+  width: 110%;
+}
+.coofee_box > h3 {
+  text-align: left;
+  margin: 0px;
+  padding: 5px;
+}
+
+.coofee_box > p {
+  text-align: left;
+  margin: 0px;
+  padding: 5px;
+}
+
+.coofee_box > span {
+  background-color: white;
+  color: #c4a484;
+  position: absolute;
+  font-family: PoppinsMedium;
+  top: 0px;
+  right: 0px;
+  padding: 5px;
+  width: 45px;
+  font-size: 12px;
+  text-align: center;
 }
