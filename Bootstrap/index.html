@@ -1,29 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="row mt-4 row-cols-2 row-cols-sm-2  row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
-        <div class="col border bg-danger py-5 text-white"><span>Col 1</span></div>
-        <div class="col border bg-success py-5 text-white"><span>Col 2</span></div>
-        <div class="col border bg-black py-5 text-white"><span>Col 3</span></div>
-        <div class="col border bg-warning py-5 text-white"><span>Col 4</span></div>
-        <div class="col border bg-danger py-5 text-white"><span>Col 5</span></div>
-        <div class="col border bg-secondary py-5 text-white"><span>Col 6</span></div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            class="nav-img"
+            src="https://images.unsplash.com/photo-1619454016518-697bc231e7cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZCUyMHJlc3RhdXJhbnQlMjBsb2dvfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Food Items</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Biryani</a></li>
+                <li><a class="dropdown-item" href="#">Corma</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                  Nashta
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Paratha</a>
+                  <a class="dropdown-item" href="#">Anda</a>
+                  <a class="dropdown-item" href="#">Chae</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Slider -->
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://images.unsplash.com/photo-1518912035784-a8f9e8c7d035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWdnJTIwZnJpZXxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=1400&q=60"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1674406481284-43eba097a291?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VGVhfGVufDB8fDB8fHww&auto=format&fit=crop&w=1400&q=30"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1617054175880-d1e4fa753bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVnZyUyMGZyaWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1400&q=30"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- content -->
+    <div class="container py-5">
+      <h1 class="text-center my-3">Nashta Items</h1>
+
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <a href="https://www.foodpanda.pk/" target="_blank">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Food</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <a href="https://www.foodpanda.pk/" target="_blank">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Food</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-center my-3">Lunch Items</h1>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <a href="https://www.foodpanda.pk/" target="_blank">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Food</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <a href="https://www.foodpanda.pk/" target="_blank">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Food</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 my-2 col-xl-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1574172368358-4898a80133c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <footer class="text-center row py-4 bg-secondary-subtle">
+      <div class="col">
+        <span>Copy Right Reserved @2023</span>
+      </div>
+      <div class="col">
+        <a href=""> <i class="fa-solid fa-globe"></i> </a>
+        <a href="">
+          <i class="p-2 fa-brands fa-facebook"></i>
+        </a>
+        <a href="">
+          <i class="p-2 fa-brands fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="p-2 fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

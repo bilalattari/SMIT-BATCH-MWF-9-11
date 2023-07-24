@@ -1,0 +1,65 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.card {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #c8c8fa !important;
+}
+
+.nav-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 125px;
+}
+
+.carousel-item > img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  color: #3a3aa3 !important;
+}
+@media (min-width: 1400px) {
+  .carousel {
+    height: 800px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel {
+    height: 600px;
+    overflow: hidden;
+  }
+}
+
+/* @media (max-width: 992px) {
+  .container {
+    background-color: blue;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-color: aliceblue;
+  }
+}
+
+@media (max-width: 567px) {
+  .container {
+    background-color: aqua;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    background-color: purple;
+  }
+} */
