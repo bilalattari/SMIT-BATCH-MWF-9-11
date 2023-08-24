@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Urdu Font";
+  src: url("fonts/Jameel-Noori-Nastaleeq.ttf");
+}
+
+body {
+  /* background-color: rgb(208, 221, 226); */
+  font-family: "Courier New", Courier, monospace;
+  text-transform: capitalize;
+}
+
+h4 {
+  font-family: Urdu Font;
+  text-decoration: underline;
+}
+
+h1 {
+  /* letter-spacing: 10px; */
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+  display: inline-block;
+  padding-top: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+h1::first-letter {
+  /* font-size: 100px; */
+}
+
+h1:hover {
+  text-shadow: 1px 1px 3px darkgrey;
+  /* background-color: red; */
+  color: white;
+}
+
+a {
+  font-size: 120%;
+  margin: 20px;
+
+  background-color: red;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+a:link {
+  font-size: 20px;
+  color: red;
+}
+
+span {
+  vertical-align: top;
+}
+
+p {
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: extra-condensed;
+  line-height: 20px;
+  word-spacing: 8px;
+  text-align: left;
+  /* text-align: justify; */
+}
+
+blockquote > p {
+  text-indent: 80px;
+}
+
+blockquote > p:first-line {
+  background-color: aquamarine;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: black;
+  padding: 20px;
+}
+
+.box1 {
+  background-color: orange;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.box2 {
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+}

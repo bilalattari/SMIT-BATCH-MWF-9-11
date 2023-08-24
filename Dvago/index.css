@@ -1,0 +1,23 @@
+.order_btn {
+  background-color: #76bc21 !important;
+  border-color: #76bc21 !important;
+}
+
+.primarycolor {
+  color: #76bc21;
+}
+.primaryBgcolor {
+    background-color: #76bc21;
+  }
+
+.menu_container{
+    cursor: pointer;
+}
+
+/* .carousel-item{
+    width: 90% !important;
+}
+
+.carousel-inner{
+    overflow: visible !important;
+} */

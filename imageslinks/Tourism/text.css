@@ -1,0 +1,58 @@
+/* Universal Selector */
+* {
+  font-family: "Courier New", Courier, monospace !important;
+  background-color: hsl(209°, 56%, 28%);
+
+}
+/* element name */
+body {
+  /* background-color: #f5fbfc; */
+}
+/* class name */
+.heading {
+  color: rgb(45, 101, 150);
+}
+.subtitle {
+  font-weight: 600;
+}
+
+div .subtitle {
+  color: black;
+}
+
+/* id */
+#desc {
+  color: white;
+  background-color: rgba(0, 0, 0 , 0.4);
+  /* opacity: 0.9; */
+}
+
+/* give style to child */
+ol > li {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* descendant Selector */
+
+div b {
+  font-size: 30px;
+}
+
+/* Adjacent Sibling Selector */
+b + p {
+  text-decoration: underline;
+}
+
+/* General Sibling Selector */
+div ~ p {
+  text-decoration-line: overline;
+  font-size: 50px;
+}
+
+div ~ p {
+  font-size: 16px;
+}
+
+li {
+  font-family: Arial, Helvetica, sans-serif;
+}
