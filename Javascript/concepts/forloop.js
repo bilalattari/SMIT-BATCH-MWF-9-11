@@ -66,36 +66,36 @@
 
 //sum
 
-const numbers = [20, 112, 10, 20, 231, 131, 13]
+// const numbers = [20, 112, 10, 20, 231, 131, 13]
 
-let sum = 0
+// let sum = 0
 
-for (var i = 0; i < numbers.length; i++) {
-  sum = sum + numbers[i]
-}
-document.write('Sum of [10 ,20 , 20,112,231,131,13] will be ' + sum + '<br />')
+// for (var i = 0; i < numbers.length; i++) {
+//   sum = sum + numbers[i]
+// }
+// document.write('Sum of [10 ,20 , 20,112,231,131,13] will be ' + sum + '<br />')
 
-let highest = 0
+// let highest = 0
 
-for (var i = 0; i < numbers.length; i++) {
-  if (numbers[i] > highest) {
-    highest = numbers[i]
-  }
-}
-document.write(
-  'Highest number of [10 ,20 , 20,112,231,131,13] will be ' + highest + '<br />'
-)
+// for (var i = 0; i < numbers.length; i++) {
+//   if (numbers[i] > highest) {
+//     highest = numbers[i]
+//   }
+// }
+// document.write(
+//   'Highest number of [10 ,20 , 20,112,231,131,13] will be ' + highest + '<br />'
+// )
 
-let lowest = numbers[0]
+// let lowest = numbers[0]
 
-for (var i = 0; i < numbers.length; i++) {
-  if (numbers[i] < lowest) {
-    lowest = numbers[i]
-  }
-}
-document.write(
-  'lowest number of [10 ,20 , 20,112,231,131,13] will be ' + lowest + '<br />'
-)
+// for (var i = 0; i < numbers.length; i++) {
+//   if (numbers[i] < lowest) {
+//     lowest = numbers[i]
+//   }
+// }
+// document.write(
+//   'lowest number of [10 ,20 , 20,112,231,131,13] will be ' + lowest + '<br />'
+// )
 
 // 1 9
 // 2 8
@@ -112,20 +112,35 @@ document.write(
 //   document.write(i + ' ' + reverse + '<br />')
 // }
 
-const cities = ['karachi', 'lahore', 'islamabad', 'hyderabad', 'larkana']
+// const cities = ['karachi', 'lahore', 'islamabad', 'hyderabad', 'larkana']
 
-const cityBtUser = prompt('Add City')
+// const cityBtUser = prompt('Add City')
 
-let cityFound = false
-for (var i = 0; i < cities.length; i++) {
-  console.log(cities[i])
-  if (cityBtUser === cities[i]) {
-    cityFound = true
-    break
+// let cityFound = false
+// for (var i = 0; i < cities.length; i++) {
+//   console.log(cities[i])
+//   if (cityBtUser === cities[i]) {
+//     cityFound = true
+//     break
+//   }
+// }
+// if (cityFound) {
+//   alert('City Found')
+// } else {
+//   alert('City Not Found')
+// }
+
+//nested loop
+
+const students = ['ahmed', 'bilal', 'anas', 'hamza']
+const students1 = ['rafeeq', 'farooq', 'bilal', 'abdul']
+
+for (var i = 0; i < students.length; i++) {
+  for (var j = 0; j < students1.length; j++) {
+    console.log(students[i], students1[j])
+
+    if (students[i] === students1[j]) {
+      console.log('same found-->', students[i], students1[j])
+    }
   }
-}
-if (cityFound) {
-  alert('City Found')
-} else {
-  alert('City Not Found')
 }
