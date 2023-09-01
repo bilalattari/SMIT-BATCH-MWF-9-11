@@ -1,5 +1,5 @@
 // length
-// indefOf
+// indexOf
 // charAt
 // slice
 // replace
@@ -28,10 +28,16 @@ const city = 'KARACHI'
 
 const msg = 'How is you?'
 
-console.log('copy1->', msg.slice(0, 4))
-console.log('copy2->', msg.slice(6, msg.length))
+// console.log('copy1->', msg.slice(0, 4))
+// console.log('copy2->', msg.slice(6, msg.length))
 console.log(msg.slice(0, 4) + 'are' + msg.slice(6, msg.length))
 
 const msgUpated = msg.replace('is', 'are')
 
 console.log(msgUpated)
+
+const hello = 'Hello World  '
+console.log(hello.trim())
+
+
+console.log(hello.charAt(1  ))
