@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <h1>Javascript Function</h1>
+    <h1>Javascript Simple Counter Application</h1>
 
-    <div>
-      <input id="input" type="text" placeholder="Count Vowels" />
-      <button onclick="countVowels()">Submit</button>
-      <h3 id="vowelscount"></h3>
-    </div>
+    <div class="container">
 
-    <div>
-      <input id="reverse" type="text" placeholder="Reverse String" />
-      <button onclick="reverseString()">Submit</button>
-      <h3 id="reverseString"></h3>
+      <h3 id ='counter'>0</h3>
+
+      <div>
+        <button onclick="handleCounter('plus')" class="plus">+</button>
+        <button onclick="handleCounter('minus')" class="minus">-</button>
+        <button onclick="handleCounter('reset')" class="reset">reset</button>
+      </div>
     </div>
-    <script src="concepts/string.js"></script>
+     
+    </div>
+    <script src="concepts/math.js"></script>
   </body>
 </html>
