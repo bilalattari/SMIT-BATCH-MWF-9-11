@@ -8,9 +8,29 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <h1>Javascript Simple Counter Application</h1>
-
+    <h1>Javascript Expense Calculater Application</h1>
     <div class="container">
+      <div style="display: flex; width: 400px;">
+        <div style="flex:1; justify-content: center;align-items: center;" >
+          <h4>Income</h4>
+          <h4>0</h4>
+        </div>
+        <div  style="flex:1; justify-content: center;align-items: center;" >
+          <h4>Expense</h4>
+          <h4>0</h4>
+        </div>
+        <div>
+          <h4  style="flex:1; justify-content: center;align-items: center;" >Profit Loss</h4>
+          <h4>0</h4>
+        </div>
+      </div>
+      <div>
+        <input placeholder="Amount" type="number" />
+        <button>Income</button>
+        <button>Expense</button>
+      </div>
+    </div>
+    <!-- <div class="container">
 
       <h3 id ='counter'>0</h3>
 
@@ -19,7 +39,7 @@
         <button onclick="handleCounter('minus')" class="minus">-</button>
         <button onclick="handleCounter('reset')" class="reset">reset</button>
       </div>
-    </div>
+    </div> -->
      
     </div>
     <script src="concepts/math.js"></script>

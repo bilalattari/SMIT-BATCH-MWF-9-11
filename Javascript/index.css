@@ -2,7 +2,7 @@ h1 {
   text-align: center;
 }
 
-button {
+/* button {
   height: 60px;
   width: 60px;
   font-size: 40px;
@@ -10,7 +10,7 @@ button {
   cursor: pointer;
   border-radius: 10px;
   overflow: hidden;
-}
+} */
 
 .plus {
   background-color: green;
