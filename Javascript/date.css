@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+}
+
+.inputDiv{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.daysRemaining{
+    padding: 5px;
+    background-color: rgb(253, 241, 241);
+    width: 200px;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+input {
+    margin-right: 12px;
+}

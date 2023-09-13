@@ -5,9 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="date.css" />
   </head>
   <body>
-    <h1>Javascript Date</h1>
+    <h3>Check Your Age</h3>
+    <div class="inputDiv">
+      <input
+        type="date"
+        id="dob"
+        placeholder="Add Your DOB"
+      />
+      <button onclick="checkAge()">Check</button>
+    </div>
+
+    <div class="daysRemaining">
+      <p>You are  <b id="age">0</b> years old.</p>
+    </div>
+
+    <h3>Event Countdown</h3>
+    <div class="inputDiv">
+      <input
+        type="date"
+        id="eventDate"
+        placeholder="Add Any Upcoming Event Date"
+      />
+      <button onclick="checkCountdown()">Check</button>
+    </div>
+
+    <div class="daysRemaining">
+      <p>Days Remaining <b id="countdown">10</b></p>
+    </div>
 
     <script src="concepts/date.js"></script>
   </body>

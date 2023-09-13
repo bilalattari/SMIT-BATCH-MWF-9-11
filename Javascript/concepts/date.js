@@ -17,47 +17,69 @@ let car = {
 
 // console.log('greetings->', greetings)
 
-let now = new Date()
+// let now = new Date()
 
-console.log('now->', typeof now)
-console.log('now->', now)
+// console.log('now->', typeof now)
+// console.log('now->', now)
 
-// get day
-console.log(now.getDay())
+// // get day
+// console.log(now.getDay())
 
-// get month
-console.log(now.getMonth())
+// // get month
+// console.log(now.getMonth())
 
-// get year
-console.log(now.getFullYear())
+// // get year
+// console.log(now.getFullYear())
 
-// get hour and minute
-console.log(now.getHours() + ' - ' + now.getMinutes())
+// // get hour and minute
+// console.log(now.getHours() + ' - ' + now.getMinutes())
 
-// get date
-console.log(now.toDateString())
-console.log(now.toLocaleDateString())
+// // get date
+// console.log(now.toDateString())
+// console.log(now.toLocaleDateString())
 
-//get time
+// //get time
 
-// milliseconds -> 1000/seconds -> 60/mins => 60/hours => 24/days => 30/Months => 12/Years
-console.log(now.getTime() / 1000 / 60 / 60 / 24 / 30 / 12)
+// // milliseconds -> 1000/seconds -> 60/mins => 60/hours => 24/days => 30/Months => 12/Years
+// console.log(now.getTime() / 1000 / 60 / 60 / 24 / 30 / 12)
 
-// get time string
-console.log(now.toLocaleTimeString())
-console.log(now.toTimeString())
+// // get time string
+// console.log(now.toLocaleTimeString())
+// console.log(now.toTimeString())
 
-let birthdayDate = new Date()
+// let birthdayDate = new Date()
 
-// set Date
-birthdayDate.setDate(10)
+// // set Date
+// birthdayDate.setDate(10)
 
-// set month
-birthdayDate.setMonth(4)
+// // set month
+// birthdayDate.setMonth(4)
 
-//set year
-birthdayDate.setFullYear(2006)
+// //set year
+// birthdayDate.setFullYear(2006)
 
-console.log(birthdayDate)
-console.log('birthdayDate->', birthdayDate.getTime())
-console.log('now->', now.getTime())
+// console.log(birthdayDate)
+// console.log('birthdayDate->', birthdayDate.getTime())
+// console.log('now->', now.getTime())
+
+function checkCountdown () {
+  let event = document.getElementById('eventDate')
+  let now = new Date()
+  let eventDate = new Date(event.value)
+  let difference = eventDate.getTime() - now.getTime()
+  let difToDay = Math.round(difference / 1000 / 60 / 60 / 24)
+  let countdown = document.getElementById('countdown')
+  countdown.innerText = difToDay
+}
+
+function checkAge () {
+  let dob = document.getElementById('dob')
+  let dobDate = new Date(dob.value)
+  let now = new Date()
+  console.log('current year->', now.getFullYear())
+  console.log('dob year->', dobDate.getFullYear())
+
+  let age = now.getFullYear() - dobDate.getFullYear()
+  let ageElement = document.getElementById('age')
+  ageElement.innerText = age
+}
