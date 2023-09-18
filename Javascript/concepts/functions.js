@@ -31,13 +31,13 @@
 //   return firstLetter + txt.substring(1, txt.length)
 // }
 
-// function makeFirstLetterCapital (txt) {
-//   let firstLetter = txt[0].toUpperCase()
-//   return firstLetter + txt.slice(1)
-// }
+function makeFirstLetterCapital (txt) {
+  let firstLetter = txt[0].toUpperCase()
+  return firstLetter + txt.slice(1)
+}
 
-// let updated = makeFirstLetterCapital('pakistan')
-// console.log(updated)
+let updated = makeFirstLetterCapital('pakistan')
+console.log(updated)
 
 // function showIndOfLetter(string , letter){
 //   let ind =  string.indexOf(letter)
@@ -46,11 +46,32 @@
 
 // console.log(showIndOfLetter('ABBC' , 'B'))
 
-function numberOfSpaces (sentence) {
-  const splittedArr = sentence.split(' ')
-  console.log(splittedArr.length - 1)
+// function numberOfSpaces (sentence) {
+//   const splittedArr = sentence.split(' ')
+//   console.log(splittedArr.length - 1)
+// }
+
+// numberOfSpaces('Students are learning Javascript')
+// numberOfSpaces('Students are learning Javascript in Saylani Bahadurabad')
+// numberOfSpaces('Students are learning Javascript Funnctions')
+
+// A function is a block of JavaScript that robotically does the same thing again and again,
+
+//Named Function
+function abc () {}
+
+//Anonymous Function
+const greetings = function () {
+  alert('greeting')
 }
 
-numberOfSpaces('Students are learning Javascript')
-numberOfSpaces('Students are learning Javascript in Saylani Bahadurabad')
-numberOfSpaces('Students are learning Javascript Funnctions')
+//arrow function
+const hello = () => alert('Hello')
+
+//First we declare a function and then we call/invoke it.
+
+//Like this we can invoke a function
+// greetings()
+
+// the data that we pass while calling/invoking a function is called Argument
+greetings('Hello')

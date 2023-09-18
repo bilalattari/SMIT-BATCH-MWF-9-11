@@ -10,30 +10,23 @@
   <body>
     <h3>Check Your Age</h3>
     <div class="inputDiv">
-      <input
-        type="date"
-        id="dob"
-        placeholder="Add Your DOB"
-      />
+      <input type="date" id="dob" placeholder="Add Your DOB" />
       <button onclick="checkAge()">Check</button>
     </div>
 
     <div class="daysRemaining">
-      <p>You are  <b id="age">0</b> years old.</p>
+      <p>You are <b id="age">0</b> years old.</p>
     </div>
 
-    <h3>Event Countdown</h3>
+    <h3>Calculate Days between two date</h3>
     <div class="inputDiv">
-      <input
-        type="date"
-        id="eventDate"
-        placeholder="Add Any Upcoming Event Date"
-      />
+      <input type="date" id="date1" placeholder="Add Start Date" />
+      <input type="date" id="date2" placeholder="Add End Date" />
       <button onclick="checkCountdown()">Check</button>
     </div>
 
     <div class="daysRemaining">
-      <p>Days Remaining <b id="countdown">10</b></p>
+      <p>Days In Beteen <b id="countdown">10</b></p>
     </div>
 
     <script src="concepts/date.js"></script>

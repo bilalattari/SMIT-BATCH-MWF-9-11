@@ -63,9 +63,10 @@ let car = {
 // console.log('now->', now.getTime())
 
 function checkCountdown () {
-  let event = document.getElementById('eventDate')
-  let now = new Date()
-  let eventDate = new Date(event.value)
+  let date1 = document.getElementById('date1')
+  let date2 = document.getElementById('date2')
+  let now = new Date(date1.value)
+  let eventDate = new Date(date2.value)
   let difference = eventDate.getTime() - now.getTime()
   let difToDay = Math.round(difference / 1000 / 60 / 60 / 24)
   let countdown = document.getElementById('countdown')
@@ -76,9 +77,6 @@ function checkAge () {
   let dob = document.getElementById('dob')
   let dobDate = new Date(dob.value)
   let now = new Date()
-  console.log('current year->', now.getFullYear())
-  console.log('dob year->', dobDate.getFullYear())
-
   let age = now.getFullYear() - dobDate.getFullYear()
   let ageElement = document.getElementById('age')
   ageElement.innerText = age
