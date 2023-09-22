@@ -5,30 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="date.css" />
+    <link rel="stylesheet" href="object.css" />
   </head>
   <body>
-    <h3>Check Your Age</h3>
-    <div class="inputDiv">
-      <input type="date" id="dob" placeholder="Add Your DOB" />
-      <button onclick="checkAge()">Check</button>
+    <h3>Object In Javascript</h3>
+
+    <input placeholder="Car Name" id="name_input" />
+    <input placeholder="Car Model" id="model_input" />
+    <input placeholder="Car Color" id="color_input" />
+    <input placeholder="Used By" id="usedby_input" />
+    <input placeholder="Car Image" id="img_input" />
+    <button id="update_car">Update</button>
+
+    <div class="container">
+      <div class="car_image">
+        <img
+          id="car_img"
+          src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+        />
+      </div>
+      <div class="car_info">
+        <p>Car Name  : <span id="car_name"></span></p>
+        <p>Modal  : <span id="car_modal"></span></p>
+        <p>Used By  : <span id="car_usedBy"></span></p>
+        <p>Is New  : <span id="car_isNew"></span></p>
+        <p>Color  : <span id="car_color"></span></h2>
+      </div>
     </div>
 
-    <div class="daysRemaining">
-      <p>You are <b id="age">0</b> years old.</p>
-    </div>
-
-    <h3>Calculate Days between two date</h3>
-    <div class="inputDiv">
-      <input type="date" id="date1" placeholder="Add Start Date" />
-      <input type="date" id="date2" placeholder="Add End Date" />
-      <button onclick="checkCountdown()">Check</button>
-    </div>
-
-    <div class="daysRemaining">
-      <p>Days In Beteen <b id="countdown">10</b></p>
-    </div>
-
-    <script src="concepts/date.js"></script>
+    <script src="concepts/object.js"></script>
   </body>
 </html>

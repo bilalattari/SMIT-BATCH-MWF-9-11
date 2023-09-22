@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  margin: auto 10px;
+  background-color: aqua;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  background-color: rgb(253, 250, 250);
+}
+
+body{
+    font-size: 25px;
+}
+
+.car_image{
+    width: 500px;
+    
+}
+
+.car_image >img{
+    height: 400px;
+    width: 400px;
+}
+
+.car_info{
+    flex: 1;
+}
+
+span {
+    font-weight: bold;
+
+}
