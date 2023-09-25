@@ -5,34 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="object.css" />
+    <link rel="stylesheet" href="dom.css" />
   </head>
   <body>
-    <h3>Object In Javascript</h3>
+    <!-- <div id="first_child">
+      <h1 id="first_grand_child">First Grand Child</h1>
+      <h1>Second Grand Child</h1>
+    </div> -->
+    <input placeholder="Student Name" id="todo" />
+    <input placeholder="Father Name" id="todo" />
+    <input placeholder="Total Score" id="todo" />
+    <button onclick="createChild()">Add Info</button>
+    <table id="container">
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>F.Name</th>
+        <th>Score</th>
+        <th>Totak</th>
+      </tr>
+    </table>
 
-    <input placeholder="Car Name" id="name_input" />
-    <input placeholder="Car Model" id="model_input" />
-    <input placeholder="Car Color" id="color_input" />
-    <input placeholder="Used By" id="usedby_input" />
-    <input placeholder="Car Image" id="img_input" />
-    <button id="update_car">Update</button>
-
-    <div class="container">
-      <div class="car_image">
-        <img
-          id="car_img"
-          src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-        />
-      </div>
-      <div class="car_info">
-        <p>Car Name  : <span id="car_name"></span></p>
-        <p>Modal  : <span id="car_modal"></span></p>
-        <p>Used By  : <span id="car_usedBy"></span></p>
-        <p>Is New  : <span id="car_isNew"></span></p>
-        <p>Color  : <span id="car_color"></span></h2>
-      </div>
-    </div>
-
-    <script src="concepts/object.js"></script>
+    <script src="concepts/dom.js"></script>
   </body>
 </html>
