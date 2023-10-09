@@ -1,0 +1,90 @@
+    /* Default Light Theme Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Light Theme Styles */
+.theme-dependent {
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+header.dark-theme {
+    background-color: #555;
+}
+
+nav a.dark-theme {
+    color: #fff;
+}
+
+.container.dark-theme {
+    background-color: #444;
+    border: 1px solid #666;
+}
+
+button.dark-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+.theme-dependent.dark-theme {
+    color: #fff;
+}

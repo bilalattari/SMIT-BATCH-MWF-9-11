@@ -1,0 +1,51 @@
+body {
+  text-align: center;
+}
+
+#imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.img-card {
+  height: 220px;
+  width: 220px;
+  margin: 20px 0px;
+  aspect-ratio: 1/1;
+  border: 1px solid rgb(255, 230, 230);
+  padding: 12px;
+  cursor: pointer;
+}
+
+#modal {
+  position: fixed;
+  height: 400px;
+  width: 400px;
+  background-color: #fff;
+  top: 10%;
+  bottom: 0;
+  right: 0;
+  left: 30%;
+  border-radius: 7px;
+  box-shadow: 0.4px 0.4px 0.4px #ccc;
+  border: 1px solid #ccc;
+  display: none;
+  transition: ease-in;
+  transition-delay: 1s;
+  transition-duration: 1s;
+}
+
+#close-popup {
+  color: black;
+  font-size: 20px;
+  text-align: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#modal-img {
+  height: 300px;
+  width: 300px;
+  aspect-ratio: 1/1;
+}
