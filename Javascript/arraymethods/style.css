@@ -1,0 +1,36 @@
+#productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  height: 340px;
+  width: 300px;
+  margin: 10px 0px;
+  padding: 6px;
+}
+
+.card-title {
+  margin: 10px 0px;
+}
+
+.card-img {
+  height: 150px;
+  width: 150px;
+}
+
+h2,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+h6 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px !important;
+}
