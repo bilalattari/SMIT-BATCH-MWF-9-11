@@ -212,7 +212,9 @@ const productContainer = document.getElementById('productContainer')
 function displayAll () {
   products.forEach((data, ind) => {
     const card = `<div id =${data.id} class = 'card'> 
-    <img src = ${data.image} class = 'card-img' />
+    <div class = 'card-img'>
+    <img src = ${data.image} class = 'img-fluid' />
+    </div>
     <h2 class = 'card-title'>${data.title}</h2>
     <h6 class = 'card-category'>${data.category}</h6>
     <h6 class = 'card-price'>Price : ${data.price}</h6>

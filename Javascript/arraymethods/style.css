@@ -5,7 +5,7 @@
 }
 
 .card {
-  height: 340px;
+  min-height: 340px;
   width: 300px;
   margin: 10px 0px;
   padding: 6px;
@@ -16,8 +16,9 @@
 }
 
 .card-img {
-  height: 150px;
+  height: 180px;
   width: 150px;
+  overflow: hidden;
 }
 
 h2,
