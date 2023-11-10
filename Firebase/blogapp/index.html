@@ -8,40 +8,87 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Firebase</h1>
+    <!-- <h1>Firebase</h1> -->
 
-    <h3>Register</h3>
-    <form id="register-form">
-      <label>
-        Full Name
-        <input type="text" value="Bilal" required placeholder="Full Name" id="fullname" />
-      </label>
-      <br />
-      <label>
-        Email <input type="email" value="attari@gmail.com" required placeholder="Email" id="email" />
-      </label>
-      <br />
-      <label>
-        Password
-        <input type="password" required value="123456"   placeholder="password" id="password" />
-      </label>
-      <br />
-      <input type="submit" value="Register" />
-    </form>
+    <button id="logout">Logout</button>
+    <div id="blogContainer">
+      <form id="blog-form">
+        <label>Title<input type="text" placeholder="Blog Title" /></label> <br />
+        <label>Description <input type="text" placeholder="Blog Description" /> </label><br />
+       <label><input type="radio" name="level" checked value="Beginner" /> Beginner </label> 
+       <label><input type="radio" name="level" value="Intermediate" /> Intermediate </label> 
+       <label><input type="radio" name="level" value="Expert" /> Expert </label> 
+       <br />
 
-    <h3>Login</h3>
-    <form id="login-form">
-      <label>
-        Email <input type="email" value="attari@gmail.com" required placeholder="Email" id="email" />
-      </label>
-      <br />
-      <label>
-        Password
-        <input type="password" required value="123456"   placeholder="password" id="password" />
-      </label>
-      <br />
-      <input type="submit" value="Register" />
-    </form>
+        <input type="submit" value="Add Blog" />
+      </form>
+    </div>
+    <div id="authContainer" style="display: none;">
+      <h3>Register</h3>
+      <form id="register-form">
+        <label>
+          Full Name
+          <input
+            type="text"
+            value="Bilal"
+            required
+            placeholder="Full Name"
+            id="fullname"
+          />
+        </label>
+        <br />
+        <label>
+          Email
+          <input
+            type="email"
+            value="attari@gmail.com"
+            required
+            placeholder="Email"
+            id="email"
+          />
+        </label>
+        <br />
+        <label>
+          Password
+          <input
+            type="password"
+            required
+            value="123456"
+            placeholder="password"
+            id="password"
+          />
+        </label>
+        <br />
+        <input type="submit" value="Register" />
+      </form>
+
+      <h3>Login</h3>
+      <form id="login-form">
+        <label>
+          Email
+          <input
+            type="email"
+            value="attari@gmail.com"
+            required
+            placeholder="Email"
+            id="email"
+          />
+        </label>
+        <br />
+        <label>
+          Password
+          <input
+            type="password"
+            required
+            value="123456"
+            placeholder="password"
+            id="password"
+          />
+        </label>
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
 
     <script type="module" src="script.js"></script>
   </body>
