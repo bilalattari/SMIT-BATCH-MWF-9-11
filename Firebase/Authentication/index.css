@@ -72,3 +72,15 @@
     top: calc(50% - 1.25em);
     left: calc(50% - 1.25em);
    }
+
+
+   .todo-div{
+    padding: 10px;
+    font-size: 20px;
+   }
+
+   .todo-div > span {
+    width: 200px;
+    display: inline-block;
+    font-weight: 800;
+   }
