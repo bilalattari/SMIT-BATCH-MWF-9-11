@@ -4,3 +4,11 @@ label{
     margin-bottom: 10px;
     font-size: 14px;
 }
+
+
+.blog{
+    background-color: aliceblue;
+    border: 1px solid antiquewhite;
+    margin: 20px 0px;
+    padding: 5px;
+}
