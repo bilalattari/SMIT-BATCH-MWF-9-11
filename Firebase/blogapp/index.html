@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="logout">Logout</button>
+    <a href="profile.html">User Profile</a>
+    <div id="blogContainer">
+      <form id="blog-form">
+        <label>Title<input type="text" placeholder="Blog Title" /></label> <br />
+        <label>Description <input type="text" placeholder="Blog Description" /> </label><br />
+       <label><input type="radio" name="level" checked value="Beginner" /> Beginner </label> 
+       <label><input type="radio" name="level" value="Intermediate" /> Intermediate </label> 
+       <label><input type="radio" name="level" value="Expert" /> Expert </label> 
+       <br />
+
+        <input type="submit" value="Add Blog" />
+      </form>
+      <label><input type="radio" name="query" checked value="All" /> All </label>
+      <label><input type="radio" name="query"  value="Beginner" /> Beginner </label> 
+      <label><input type="radio" name="query" value="Intermediate" /> Intermediate </label> 
+      <label><input type="radio" name="query" value="Expert" /> Expert </label> 
+      
+      <button id="filterBtn">Filter</button>
+      <div id="blogContainerDiv">
+      
+
+      </div>
+    </div>
+
+
+    <div id="authContainer" style="display: none;">
+      <h3>Register</h3>
+      <form id="register-form">
+        <label>
+          Full Name
+          <input
+            type="text"
+            value="Bilal"
+            required
+            placeholder="Full Name"
+            id="fullname"
+          />
+        </label>
+        <br />
+        <label>
+          Email
+          <input
+            type="email"
+            value="attari@gmail.com"
+            required
+            placeholder="Email"
+            id="email"
+          />
+        </label>
+        <br />
+        <label>
+          Password
+          <input
+            type="password"
+            required
+            value="123456"
+            placeholder="password"
+            id="password"
+          />
+        </label>
+        <br />
+        <input type="submit" value="Register" />
+      </form>
+
+      <h3>Login</h3>
+      <form id="login-form">
+        <label>
+          Email
+          <input
+            type="email"
+            value="razaa@gmail.com"
+            required
+            placeholder="Email"
+            id="email"
+          />
+        </label>
+        <br />
+        <label>
+          Password
+          <input
+            type="password"
+            required
+            value="123456"
+            placeholder="password"
+            id="password"
+          />
+        </label>
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

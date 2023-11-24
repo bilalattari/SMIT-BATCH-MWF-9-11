@@ -1,0 +1,39 @@
+label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#blog-form,
+#user-info>input,
+textarea {
+    display: block;
+    width: 300px;
+    margin: 10px 0px;
+    height: 30px;
+    border: 1px solid lightblue;
+}
+
+#user-info>img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+#updateBtn {
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+
+.blog {
+    background-color: aliceblue;
+    border: 1px solid antiquewhite;
+    margin: 20px 0px;
+    padding: 5px;
+}
