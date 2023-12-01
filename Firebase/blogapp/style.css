@@ -37,3 +37,77 @@ textarea {
     margin: 20px 0px;
     padding: 5px;
 }
+
+
+#chatcontainer{
+    height: 90vh;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+}
+
+#chat_users{
+    width: 200px;
+    height: 100%;
+    overflow: scroll;
+    border-right: 1px solid black;
+}
+#chat_msgs_div{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat_msgs{
+    flex-grow: 1;
+    height: 90%;
+    overflow: scroll;
+}
+
+#chat_input{
+    width: 350px;
+    height: 30px;
+    margin: 3px;
+}
+
+
+#chat_send_msg{
+    height: 35px;
+}
+
+.chat_user_div{
+    height: 60px;
+    border-bottom: 1px solid lightcyan;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chat_user_div > img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.chat_user_div > span{
+   font-size: 16px;
+   font-weight: 200;
+   padding-left: 10px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.chat-msg-div{
+    padding: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin: 10px 3px;
+    max-width: 60%;
+}
+
+.user-msg{
+    background-color: greenyellow;
+}
+
+.another-user-msg{
+    background-color: darkgrey;
+}

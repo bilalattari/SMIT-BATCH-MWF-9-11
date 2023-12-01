@@ -16,7 +16,10 @@ import {
   getDocs,
   getDoc,
   query, where,
-  updateDoc
+  updateDoc,
+  serverTimestamp,
+  onSnapshot,
+  orderBy
 } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js'
 
 import {
@@ -53,7 +56,11 @@ const user_number = document.getElementById('user_number')
 const user_about = document.getElementById('user_about')
 const user_profile_img = document.getElementById('user_profile_img')
 const user_img = document.getElementById('user_img')
-
+const chat_container = document.getElementById('chatcontainer')
+const chat_users = document.getElementById('chat_users')
+const chat_msgs_container = document.getElementById('chat_msgs')
+const chat_input = document.getElementById('chat_input')
+const chat_send_msg_btn = document.getElementById('chat_send_msg')
 
 
 let userInfo;
@@ -71,6 +78,11 @@ onAuthStateChanged(auth, user => {
         getBlogs()
       }
     }
+    if (chat_container) {
+      getAllUsers()
+    }
+
+
   } else {
     console.log('User is logged out')
     if (authContainer) {
@@ -268,6 +280,107 @@ user_profile_img?.addEventListener('change', async function () {
     console.log(err)
   }
 })
+
+
+//Chat work
+
+let anotherUser;
+
+async function getAllUsers() {
+  const userCollectionRef = collection(db, 'users')
+  const querySnapshot = await getDocs(userCollectionRef);
+  chat_users.innerHTML = null
+  if (querySnapshot.empty) return chat_users.innerHTML = 'No Users in db'
+  querySnapshot.forEach(async (user) => {
+    let userInfo = user.data()
+
+    const div = document.createElement('div')
+    div.id = user.id
+    div.className = 'chat_user_div'
+    const span = document.createElement('span')
+    const img = document.createElement('img')
+    span.innerText = userInfo.fullname
+    img.src = userInfo.profileImg ? userInfo.profileImg : 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnxlbnwwfHwwfHx8MA%3D%3D'
+    div.appendChild(img)
+    div.appendChild(span)
+    chat_users.appendChild(div)
+
+
+    div.addEventListener('click', function () {
+      console.log(this)
+      const allUsersDoc = document.getElementsByClassName('chat_user_div')
+      for (let i = 0; i < allUsersDoc.length; i++) {
+        allUsersDoc[i].style.backgroundColor = '#fff'
+      }
+      this.style.backgroundColor = '#ccc'
+      anotherUser = this.id
+      getChatMsgs()
+    })
+  })
+
+}
+
+
+chat_send_msg_btn?.addEventListener('click', async function () {
+  if (!chat_input.value) return alert('PLEASE ADD SOME MSG')
+
+  try {
+    const chatRef = collection(db, 'chat')
+    const obj = {
+      msg: chat_input.value,
+      from: uid,
+      timeStamp: serverTimestamp(),
+      participants: [uid, anotherUser],
+      chatId: generateChatId()
+    }
+
+    await addDoc(chatRef, obj)
+    chat_input.value = ''
+    console.log(obj)
+  } catch (err) {
+    console.log(err)
+  }
+
+})
+
+function generateChatId() {
+  let chatId = uid > anotherUser ? uid + anotherUser : anotherUser + uid
+
+  return chatId
+}
+
+async function getChatMsgs() {
+
+  console.log(dayjs())
+  console.log(uid, anotherUser)
+  chat_msgs_container.innerHTML = ''
+  const chatQuery = query(collection(db, 'chat'),
+    orderBy('timeStamp'),
+    where('chatId', '==', generateChatId()))
+  onSnapshot(chatQuery, (doc) => {
+    if (!doc.empty) {
+      chat_msgs_container.innerHTML = ''
+
+      doc.forEach((data) => {
+        const chat = data.data()
+
+        console.log(chat.timeStamp.toDate() ) 
+        const chatDiv = `<div class ='chat-msg-div ${chat.from == uid ? 'user-msg' : 'another-user-msg'}'>  ${chat.msg}
+        <p>${dayjs(chat.timeStamp.toDate()).format('ddd-MM-YYYY HH mm s')} </p>
+
+        </div>`
+        chat_msgs_container.innerHTML += chatDiv
+      })
+    }
+  })
+
+}
+
+
+
+
+
+
 
 
 
